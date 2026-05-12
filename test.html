@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Main Page</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href='/project'>Главная</a></li>
+      <li><a href='/project/gallerey.html'>Галерея</a></li>
+      <li><a href='/project/data.html'>Данные</a></li>
+      <li><a href='#'>Тест</a></li>
+      <li><a href='https://lyceum.ort.md/'>На сайт школы</a></li>
+    </ul>
+    <div id="quiz">
+      <h3>Какой язык работает в браузере?</h3>
+    
+      <button onclick="check('a')">Python</button>
+      <button onclick="check('b')">JavaScript</button>
+      <button onclick="check('c')">C++</button>
+    
+      <p id="result"></p>
+    </div>
+    
+    <script>
+    function check(answer) {
+      const result = document.getElementById('result');
+    
+      if(answer === 'b') {
+        result.innerText = 'Правильно!';
+      } else {
+        result.innerText = 'Неправильно';
+      }
+    }
+    </script>
+  </body>
+</html>
