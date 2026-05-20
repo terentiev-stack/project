@@ -1,8 +1,13 @@
 <html>
   <head>
     <title>Main Page</title>
+    <style>
+      li, h3, p, a, td, th {
+        color: white;
+      }
+    </style>
   </head>
-  <body>
+  <body bgcolor='blue'>
     <ul>
       <li><a href='/project'>Главная</a></li>
       <li><a href='/project/gallerey.html'>Галерея</a></li>
@@ -19,12 +24,66 @@
     
       <p id="result"></p>
     </div>
+    <div id="quiz">
+      <h3>Сколько нужно сдать экзаменов по БАК?</h3>
+    
+      <button onclick="check2('a')">4</button>
+      <button onclick="check2('b')">5</button>
+      <button onclick="check2('c')">6</button>
+    
+      <p id="result2"></p>
+    </div>
+    <div id="quiz">
+      <h3>Какой дополнитьельний язык изучается в лицее Б.З.Герцля?</h3>
+    
+      <button onclick="check3('a')">Иврит</button>
+      <button onclick="check3('b')">Французский</button>
+      <button onclick="check3('c')">Китайский</button>
+    
+      <p id="result3"></p>
+    </div>
+    <div id="quiz">
+      <h3>Сколько есть профилей образования в лицее Б.З.Герцля?</h3>
+    
+      <button onclick="check4('a')">0</button>
+      <button onclick="check4('b')">1</button>
+      <button onclick="check4('c')">2</button>
+    
+      <p id="result4"></p>
+    </div>
     
     <script>
-    function check(answer) {
-      const result = document.getElementById('result');
+      function check(answer) {
+        const result = document.getElementById('result');
+      
+        if(answer === 'b') {
+          result.innerText = 'Правильно!';
+        } else {
+          result.innerText = 'Неправильно';
+        }
+      }
+      function check2(answer) {
+      const result = document.getElementById('result2');
     
       if(answer === 'b') {
+        result.innerText = 'Правильно!';
+      } else {
+        result.innerText = 'Неправильно';
+      }
+    }
+      function check3(answer) {
+      const result = document.getElementById('result3');
+    
+      if(answer === 'a') {
+        result.innerText = 'Правильно!';
+      } else {
+        result.innerText = 'Неправильно';
+      }
+    }
+      function check4(answer) {
+      const result = document.getElementById('result4');
+    
+      if(answer === 'c') {
         result.innerText = 'Правильно!';
       } else {
         result.innerText = 'Неправильно';
